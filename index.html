@@ -1,1 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing for All Devices: A UX Case Study on Seed Cafe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Inria Serif' rel='stylesheet'> 
+    <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
+</head>
+<body>
+<header>Designing for All Devices: A Responsive Redesign of Seed Cafe</header>
+<img src="images/diff_screens.jpeg" alt="different screens for responsive design">
+<h3>This case study focuses on webpage redesign with the primary goals of enhancing user experience across devices and improving accessibility for better usability.</h3>
+<div ><header class="header-mid">Why this interface?</header>
+    <h2>As someone always looking to try new coffee shops in Providence, I stumbled upon this place through a Google search, but I quickly noticed the website was not very informative or helpful to a prospective customer:</h2>
+</div>
+<img src="images/original_webpage.png" alt="original webpage of seed cafe">
+<p>(The full original website can be found <a href="https://www.seedcaferi.com" target="_blank">here</a>.)</p>
+<h2>Here are some of the main issues I had with Seed Cafe's interface:</h2>
 
+<table>
+  <thead>
+    <tr>
+      <th>Efficiency</th>
+      <th>Learnability</th>
+      <th>Memorability</th>
+      <th>Accessibility (WebAIM WAVE)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Small, hard-to-read font – Slows processing, strains experience</td>
+      <td>No "Seed Cafe" header – Users don’t know what site it is</td>
+      <td>No visual/brand identity – Nothing memorable about the site</td>
+      <td>Detected missing page title, no heading structure, and no page regions</td>
+    </tr>
+    <tr>
+      <td>Search bar lacks Enter button – Slows task completion</td>
+      <td>No about section – Users don’t learn cafe’s identity or values</td>
+      <td>Poor menu layout – Hard to recall or locate items</td>
+      <td>Most buttons did not have an aria-label</td>
+    </tr>
+    <tr>
+      <td>Identical pink menu boxes – Hard to scan or differentiate items</td>
+      <td>No photos of cafe or food – Brand/menu appeal unclear</td>
+      <td>Confusing/broken UI elements – Users forget how to navigate</td>
+      <td>Interactive elements were not all accessible using keyboard</td>
+    </tr>
+    <tr>
+      <td>Non-functional filter dropdown – Frustration and clutter</td>
+      <td>Unclear location info – Users can’t find where the cafe is</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+
+<header class="header-green">Road to Redesign</header>
+<h2>I choose to redesign the webpage for Seed Cafe with the following goals in mind:</h2>
+<h1>
+  <li>Creating a consistent look and feel</li>
+  <li>Making important information stand out more clearly</li>
+  <li>Helping the cafe feel more recognizable online</li>
+  <li>Making the website easier for everyone to use</li>
+</h1>
+
+<h2>Given these objectives, here is my <b>redesigned style guide:</b></h2>
+<img src="images/sty_guide.png" alt="redesigned style guide for seed cafe">
+<h2 class="gap">Using Figma, I was also able to create <b>high-fidelity mockups</b> for three different screen sizes:</h2>
+<div class="col-con"><h3 class="green"><b>1. Computer(3840px width):</b></h3>
+<img class='img1' src="images/laptop.png" alt="website prototype on large computer screen">
+</div>
+
+<div class="tab-phon">
+  <div class="img-container">
+    <h3 class="image-label"><b>2. Tablet(Max-width 768px):</b></h3>
+    <img class='img1' src="images/tablet.png" alt="website prototype on tablet">
+  </div>
+  <div class="img-container">
+    <h3 class="image-label"><b>3. Phone(Max-width 375px):</b></h3>
+    <img class='img1' src="images/phone.png" alt="website prototype on phone">
+  </div>
+</div>
+
+<h5 class="gap"><b>Layout and Styling Notes:</b></h5>
+
+
+  <h6 class="smallerg">Header:</h6>
+  <h6 class="no-marg">
+    <li>Flex layout, space-between, bottom-aligned</li>
+    <li>Large serif for top menu, left aligned</li>
+    <li>Search and profile icons in a seperate flex box than logo and menu options</li>
+    <details>
+    <summary class="smaller">Tablet version</summary>
+    <ul>
+      <li>Same size headers, just shifted more central</li>
+      <li>Main image shrinks (side margins 90px)</li>
+    </ul>
+  </details>
+  <details>
+    <summary class="smaller">Phone version</summary>
+    <ul>
+      <li>Typography of headers shrink from 23px to 14px and are shifted to center</li>
+      <li>Icon sizes decrease</li>
+    </ul>
+  </details>
+  </h6>
+
+
+<h4 class="smallerg">Title and Image:</h4>
+  <h4 class="no-marg-w">
+    <li>No flex and centered</li>
+    <details>
+    <summary class="smaller">Tablet version</summary>
+    <ul>
+      <li>Title font and image size shrink slightly (image margins 140px)</li>
+      <li>Operating hours stay same</li>
+    </ul>
+  </details>
+  <details>
+    <summary class="smaller">Phone version</summary>
+    <ul>
+      <li>Image margins decrease to 50px</li>
+      <li>Title font decreases to 25px</li>
+      <li>Operating hours font decreases to 18px</li>
+    </ul>
+  </details>
+  </h4>
+
+  <h1 class='smallerg'>Drink Specials Menu:</h1>
+ <h1 class="no-marg-w">
+    <li>"Drink Specials" menu left aligned and in a flex box with plant icon</li>
+    <li>Menu container: Grid layout (2 cols, 3 rows)</li>
+    <li>Responsive max-width using calc(100vw - 70px)</li>
+    <details>
+    <summary class="smaller">Tablet version</summary>
+    <ul>
+      <li>Menu container width decreases (margins 50px)</li>
+      <li>Font sizes and line height slightly decrease</li>
+    </ul>
+  </details>
+  <details>
+    <summary class="smaller">Phone version</summary>
+    <ul>
+      <li>Menu container margins decrease to 35px</li>
+      <li>Container grid turns into one column</li>
+      <li>Drink prices shift to the right</li>
+      <li>Font sizes/line height decrease</li>
+    </ul>
+  </details>
+ </h1>
+
+
+  <h6 class='smallerg'>Footer:</h6>
+  <h6 class="no-marg-w">
+    <li>Flex row-wrap, space-around, responsive height</li>
+    <li>3 seperate flexboxes within: One for name of cafe and address, one for email sign-up textbox, and another for social media icons</li>
+    <li>Labels each grouping of items as .item1, .item2, and .item3 for custom order values per screen size</li>
+    <li>Sign-up button and search box positioned absolutely to allow overlap of elements</li>
+  </ul>
+      <details>
+    <summary class="smaller">Tablet version</summary>
+    <ul>
+      <li>Container turns into a grid and sign-up button gets moved to second row</li>
+    </ul>
+  </details>
+  <details>
+    <summary class="smaller">Phone version</summary>
+    <ul>
+      <li>Flexbox turns into one-column</li>
+    </ul>
+  </details>
+</h6>
+
+<header class="header-purple">Final Webpage</header>
+<h3 class="smaller">Click <a href="https://alexandra-mcintyre.github.io/seed-cafe-redesign/#" target="_blank">here</a> to explore the live version of the redesigned Seed Cafe webpage.</h3>
+
+<p class="larger">With the design vision and layout choices established, here’s the fully developed version of the Seed Cafe webpage (shown on all three screen sizes):</p>
+
+
+<div class="col-con"><h3 class="g-top"><b>Computer(3840px width):</b></h3>
+<img class='img1' src="images/computer-web.png" alt="website prototype on large computer screen">
+</div>
+
+<div class="tab-phon">
+  <div class="img-container">
+    <h3 class="image-labelp"><b>Tablet(Max-width 768px):</b></h3>
+    <img class='img1' src="images/tablet-web.png" alt="website prototype on tablet">
+  </div>
+  <div class="img-container">
+    <h3 class="image-labelp"><b>Phone(Max-width 375px):</b></h3>
+    <img class='img1' src="images/phone-web.png" alt="website prototype on phone">
+  </div>
+</div>
+
+
+<h3 class="conclu">The responsive redesign of the Seed Cafe webpage enhances both usability and visual appeal across devices. 
+  By improving layout consistency, establishing a clearer visual hierarchy, and reinforcing the cafe’s brand identity, the site
+   now offers a more intuitive and engaging user experience. </h3>
