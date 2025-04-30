@@ -16,7 +16,7 @@ body {
     font-family: 'Poppins', Arial, sans-serif, 'Gill Sans', 'Gill Sans MT';
     margin: 0;
     padding: 20px;
-    background: #e4edf6;
+    background: #ffffff;
     color: #333;
 }
 
@@ -33,7 +33,7 @@ p {
 
 /* Header */
 header {
-    background: linear-gradient(90deg, #5cabef, #b7d7f7);
+    background: linear-gradient(90deg, #388af6, #ffffff, #388af6);
     color: rgb(5, 5, 5);
     padding: 20px;
     text-align: center;
@@ -56,14 +56,14 @@ header {
 
 .header-green{
     background: white;
-    color:#7ec636;
+    color:#D22FB1;
     margin-top: 60px;
     margin-bottom: 20px;
 }
 
 .header-purple{
     background: white;
-    color:#692953;
+    color:#5977e6;
     margin-top: 100px;
     margin-bottom: 20px;
 }
@@ -92,7 +92,7 @@ h1 {
     letter-spacing: 1px;
     text-align: center;
     font-weight:bold;
-    color:#7ec636;
+    color:#c373b3;
     max-width: fit-content;
     padding: 10px;
     background: white;
@@ -148,7 +148,7 @@ li{
 
 h3 {
     font-size: 30px;
-    color: #692953;
+    color: #D22FB1;
     font-weight: normal;
     max-width: 900px;
     margin: 0 auto; /* Centers the text block */
@@ -213,7 +213,7 @@ tr:nth-child(even) {
 }
 
 tr:hover {
-    background-color: #eefee7;
+    background-color: rgb(255, 232, 240);
 }
 
 
@@ -272,7 +272,7 @@ img:hover {
 
 .green{
      margin-top: 60px;
-     color: #6a7e5e
+     color: #5977e6
 }
 
 .col-con{
@@ -298,7 +298,7 @@ img:hover {
     padding: initial;
     text-align: center;
     margin-bottom: 10px;
-    color: #6a7e5e
+    color: #5977e6
 }
 
 h5{
@@ -335,7 +335,7 @@ h6 {
     letter-spacing: 1px;
     text-align: center;
     font-weight:bold;
-    color:#4aa3f1;
+    color:#388af6;
     max-width: fit-content;
     padding: 10px;
     background: white;
@@ -350,7 +350,7 @@ h4{
     letter-spacing: 1px;
     text-align: center;
     font-weight:bold;
-    color:#692953;
+    color:#D22FB1;
     max-width: fit-content;
     padding: 10px;
     background: white;
